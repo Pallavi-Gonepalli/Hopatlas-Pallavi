@@ -1,0 +1,182 @@
+.review-section {
+    position: relative;
+    padding: 80px 0 90px;
+    background: radial-gradient(circle at top, #eef2ff 0, #f9fafb 50%, #ede9fe 100%);
+    overflow: hidden;
+}
+
+.review-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 430px) minmax(0, 1fr);
+    gap: 56px;
+    align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.review-right {
+    position: relative;
+}
+
+.review-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+}
+
+@media (max-width: 768px) {
+    .review-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.review-header{
+    font-size:20px;
+    font-family: sans-serif;
+}
+
+.review-arrow{
+    margin-left:270px;
+}
+
+.review-card {
+    position: relative;
+    border-radius: 20px;
+    background-image:
+            linear-gradient(135deg, #ffffff 0, #f5f3ff 40%, #ffffff 100%),
+            linear-gradient(120deg, #00AE8D, #f97316);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 18px 20px 16px;
+    box-shadow: 0 16px 40px rgba(148, 163, 184, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    transition:
+            transform 0.22s ease,
+            box-shadow 0.22s ease,
+            background-image 0.25s ease,
+            filter 0.22s ease;
+}
+
+
+.review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 76px rgba(129, 140, 248, 0.65);
+    background-image:
+            linear-gradient(135deg, #ffffff 0, #ede9fe 45%, #ffffff 100%),
+            linear-gradient(120deg, #818cf8, #fb7185);
+    filter: brightness(1.03);
+}
+
+
+
+.wow-card {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: reviewFadeUp 0.45s ease forwards;
+}
+
+@keyframes reviewFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.review-card-header {
+    font-size:25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.review-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #e0e7ff;
+}
+
+.review-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.review-country {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+
+.review-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 2px;
+}
+
+.review-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+
+.review-card-stars {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.86rem;
+}
+
+.review-stars i {
+    color: #fbbf24;
+    font-size: 0.95rem;
+    margin-right: 2px;
+}
+
+.review-score {
+    color: #111827;
+    font-weight: 600;
+    position: relative;
+    padding-right: 12px;
+}
+
+.review-score::after {
+    content: "★";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fbbf24;
+    font-size: 0.84rem;
+}

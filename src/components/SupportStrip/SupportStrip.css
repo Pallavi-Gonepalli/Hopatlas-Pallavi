@@ -1,0 +1,46 @@
+.support-section {
+    background-color: #111c33;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.support-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.support-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 2.5rem;
+    white-space: nowrap;
+    animation: support-scroll 30s linear infinite;
+}
+
+.support-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #f9fafb;
+    font-size: 0.95rem;
+}
+
+.support-item h5 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.support-star {
+    font-size: 0.9rem;
+    color: #facc15;
+}
+
+@keyframes support-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,418 @@
+.hero-section-booking {
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-background-blur {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 440px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.94);
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+    .hero-background-blur {
+        height: 480px;
+    }
+}
+
+.hero-content-block {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+.display-title {
+    color: #fff;
+    text-align: center;
+    font-size:33px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 22px rgba(0,0,0,0.38);
+}
+.flight-icon { color: #ff5a4a; margin: 0 4px; }
+.brand { color: #2156c8; }
+
+.tagline {
+    color: #edf4ff;
+    font-size: 17px;
+    text-align: center;
+    max-width: 520px;
+    margin-bottom: 26px;
+}
+
+.flight-icon {
+    height:7vh;
+    width:8vw;
+    background-color: #ef4040;
+    border-radius:50px;
+    border-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.flight-image {
+    height:8vh;
+    margin-top:4px;
+    animation: fly-vertical 2s ease-in-out infinite;
+}
+
+@keyframes fly-vertical {
+    0% {
+        transform: translate(0, -10%) translateX(-10px);
+    }
+    50% {
+        transform: translate(0, 0) translateX(10px);
+    }
+    100% {
+        transform: translate(0, 10%) translateX(-10px);
+    }
+}
+
+
+/* Card */
+.search-card {
+    width: 100%;
+    max-width: 980px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 36px rgba(27,52,115,0.18);
+    padding: 1.6rem 1.3rem 1.3rem 1.3rem;
+}
+
+/* Top row inside card */
+.card-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tab-flights .flights-tab {
+    border-radius: 50px;
+    border: none;
+    background: #e9543d;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.6em 1.4em;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.trip-radio-group {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    font-size: 0.95rem;
+}
+.trip-radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+.trip-radio-group input {
+    accent-color: #e9543d;
+}
+
+.millions-text {
+    font-size: 0.96rem;
+    color: #c03e2b;
+    font-weight: 500;
+    text-align: right;
+}
+
+/* Fields row */
+.form-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1.4fr 1.1fr 1.2fr;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+    .form-row { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+    .form-row { grid-template-columns: 1fr; }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.from-icon-wrap{
+    color: #f15a29;
+}
+
+.takeoff-icon {
+    transform: rotate(-45deg);
+    color: #1e8fcd;
+}
+.landing-icon {
+    transform: rotate(135deg);
+    color: #f15a29;
+}
+
+.field-input {
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.98rem;
+    background: #fff;
+    outline: none;
+}
+.field-input:focus {
+    border-color: #e9543d;
+}
+
+/* To wrapper with swap icon */
+.to-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.to-wrapper .field-input {
+    flex: 1;
+    padding-right: 2.4rem;
+}
+.swap-pill {
+    position: absolute;
+    right: 0.35rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: #e9543d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Departure sub text */
+.field-subtext {
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* Travellers button */
+/* Travellers button (summary field) */
+.trav-main {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #dcdfe6;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.95rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.trav-main span:first-child {
+    font-weight: 500;
+}
+
+.trav-main .label-muted {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-left: 4px;
+}
+
+/* highlight on focus/open */
+.trav-main:focus-visible,
+.trav-main.open {
+    border-color: #e9543d;
+    box-shadow: 0 0 0 2px rgba(233, 84, 61, 0.18);
+}
+
+/* wrapper field needs to be relative so dropdown is anchored correctly */
+.field {
+    position: relative;
+}
+
+/* Traveller dropdown panel – small floating card under field */
+.traveler-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    width: 280px;              /* not full card width */
+    border-radius: 14px;
+    border: 1px solid #e3e7f1;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22);
+    padding: 0.9rem 1rem 0.8rem;
+    background: #ffffff;
+    z-index: 30;
+}
+
+/* optional: title like in image 2 */
+.traveler-dropdown::before {
+    content: "Select Travelers & Class";
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.4rem;
+}
+
+/* rows and controls stay similar but tighten spacing */
+.traveler-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.35rem;
+}
+
+.trav-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.trav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.trav-controls button {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.trav-controls span {
+    min-width: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Cabin select and footer inside dropdown */
+.cabin-select {
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.cabin-select select {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #d0ddf4;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+.trav-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.btn-cancel,
+.btn-apply {
+    min-width: 70px;
+    height: 34px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease, color 0.15s ease,
+    box-shadow 0.15s ease, transform 0.05s ease;
+}
+
+.btn-cancel {
+    background-color: #e5ecf4;
+    color: #111827;
+}
+
+
+.btn-apply {
+    background-color: #e9543d;
+    color: #ffffff;
+}
+
+.btn-cancel:hover {
+    background-color: #d8e2f0;
+}
+
+.btn-apply:hover {
+    background-color: #d34530;
+}
+
+.btn-cancel:active,
+.btn-apply:active {
+    transform: scale(0.97);
+}
+
+.search-btn {
+    margin-top: 1.1rem;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: #e9543d;
+    color: #fff;
+    padding: 0.95rem 1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(233,84,61,0.33);
+}
+.search-btn:hover {
+    background: #cc4330;
+}

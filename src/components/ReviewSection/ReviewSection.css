@@ -1,0 +1,245 @@
+.review-section {
+    position: relative;
+    padding: 80px 0 90px;
+    background: #f9fafb;
+    overflow: hidden;
+}
+
+/* container */
+.review-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* layout: left text + right cards */
+.review-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+    gap: 56px;
+    align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* left side */
+.review-left {
+    position: relative;
+}
+
+.review-header h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.review-header h2 span {
+    position: relative;
+}
+
+.review-header h2 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 90px;
+    height: 3px;
+    border-radius: 999px;
+    background-color: #e9543d;
+}
+
+.review-subtitle {
+    font-size: 0.98rem;
+    color: #6b7280;
+    max-width: 420px;
+}
+
+/* trust row */
+.review-trust {
+    margin-top: 34px;
+}
+
+.review-trust-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #111827;
+}
+
+.review-stars-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.92rem;
+}
+
+/* gold‑yellow stars (left + cards) */
+.review-stars i {
+    color: #fbbf24;
+    font-size: 0.95rem;
+    margin-right: 2px;
+}
+
+.review-rating {
+    font-weight: 600;
+    color: #111827;
+}
+
+.review-muted {
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* right side cards */
+.review-right {
+    position: relative;
+}
+
+.review-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+}
+
+@media (max-width: 768px) {
+    .review-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* card */
+.review-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px 20px 16px;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.1);
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition:
+            background-color 0.18s ease,
+            border-color 0.18s ease,
+            transform 0.18s ease,
+            box-shadow 0.18s ease;
+}
+
+.review-card:hover {
+    background-color: #fdf7f6;              /* light warm highlight */
+    border-color: #fecaca;                  /* soft tinted border */
+    transform: translateY(-6px);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.18);
+}
+
+/* animated entrance */
+.wow-card {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: reviewFadeUp 0.5s ease forwards;
+}
+
+@keyframes reviewFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* header inside card */
+.review-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+/* medium profile image */
+.review-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.review-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* name + country alignment */
+.review-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.review-country {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* body text */
+.review-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 2px;
+}
+
+.review-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+/* bottom rating row */
+.review-card-stars {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.86rem;
+}
+
+/* stars already gold via .review-stars i */
+.review-score {
+    color: #111827;
+    font-weight: 600;
+}
+
+/* bottom rating row in card */
+.review-card-stars {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.86rem;
+}
+
+/* rating number text */
+.review-score {
+    color: #111827;
+    font-weight: 600;
+    position: relative;
+    padding-right: 14px;   /* space for star */
+}
+
+/* star immediately after rating (CSS-generated icon) */
+.review-score::after {
+    content: "★";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fbbf24;        /* same gold-yellow as other stars */
+    font-size: 0.9rem;
+}
+

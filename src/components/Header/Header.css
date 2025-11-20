@@ -1,0 +1,89 @@
+.header-fixed {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    width: 100vw;
+    background-color: #1d2eed;
+    color: #fff;
+    font-size: 16px;
+    padding: 3px 0;
+    margin-right:32px;
+}
+
+.header-top marquee span {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white; /* Light gray background */
+    border-bottom: 1px solid #dde3e8;
+    padding: 0.7em 2.4em;
+    height:60px;
+}
+
+
+.logo img {
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    margin-top:10px;
+}
+
+.menu a {
+    margin: 0 1.1em;
+    text-decoration: none;
+    color: #7569dd;
+    font-size:15px;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: #224066;
+}
+
+.auth-buttons button {
+    margin-left: 5px;
+    border-radius:10px;
+    border-style:none;
+    font-weight:550;
+    cursor: pointer;
+
+}
+.auth-buttons .login{
+    background: #4f96e4;
+    color: #ffffff;
+    border-radius:20px;
+    border-style:none;
+}
+.auth-buttons .register {
+    background: #4f96e4;
+    color: #ffffff;
+    border-radius:20px;
+    border-style:none;
+}
+
+.auth-buttons .guest {
+    background:#4f96e4;
+    color: #ffffff;
+    border-radius:20px;
+    border-style:none;
+}
+
+body, #root {
+    padding-top: 104px;
+}
+
+.menu, .auth-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
