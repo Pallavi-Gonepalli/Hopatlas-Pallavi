@@ -67,12 +67,12 @@ function ReviewSection() {
                             <div className="review-stars-row">
                                 {/* red/gold stars */}
                                 <span className="review-stars">
-      <i className="ti ti-star-filled" />
-      <i className="ti ti-star-filled" />
-      <i className="ti ti-star-filled" />
-      <i className="ti ti-star-filled" />
-      <i className="ti ti-star-filled" />
-    </span>
+                                    <i className="bi bi-star"></i>
+                                    <i className="bi bi-star"></i>
+                                    <i className="bi bi-star"></i>
+                                    <i className="bi bi-star"></i>
+                                    <i className="bi bi-star"></i>
+                                </span>
 
                                 {/* rating text on the same line */}
                                 <span className="review-rating-inline">
